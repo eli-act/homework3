@@ -1,19 +1,39 @@
 html {
-    margin: auto;
+    margin: 0;
     padding: 15px;
+    height: 100%;
+    font-family: Verdana, Tahoma, Arial, sans-serif;
 }
 
 h1 {
+    font-family: Verdana, Tahoma, Arial, sans-serif;
     text-align: center;
     font-size: 36px;
+    margin: 0;
 }
 
-#container {
-    
+#nav_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(110px, auto));
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
 }
 
-#container p {
 
+#nav_container label {
+    font-size: 14px;
+}
+
+#nav_container input {
+    width: 70px;
+    padding: 3px;
+}
+
+#nav_container button {
+    padding: 5px 10px;
+    cursor: pointer;
 }
 
 #div_container {
@@ -22,4 +42,15 @@ h1 {
 
 #div_container p {
 
+}
+
+/* ---------- Errors ---------- */
+#error1,
+#error2,
+#error3 {
+    color: red;
+    text-emphasis: bold;
+    text-align: center;
+    font-size: 14px;
+    margin: 2px 0;
 }
