@@ -12,6 +12,8 @@ h1 {
     margin: 0;
 }
 
+/* Navigation container styles */   
+
 #nav_container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(110px, auto));
@@ -21,9 +23,8 @@ h1 {
     margin-bottom: 5px;
 }
 
-
 #nav_container label {
-    font-size: 14px;
+    font-size: 15px;
 }
 
 #nav_container input {
@@ -36,21 +37,79 @@ h1 {
     cursor: pointer;
 }
 
+/* FizzBuzz output container styles */
+
 #div_container {
-
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 1fr;
+    gap: 4px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
 }
 
-#div_container p {
+#div_container > div {
+    display: grid;
+    place-items: center;
 
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+
+    border: 1px solid #aaa;
+    padding: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* ---------- Errors ---------- */
+/* FizzBuzz styles */
+.fizz {
+    background-color: #ffeb3b; /* Yellow */
+    color: #000;
+}
+.buzz {
+    background-color: #2196f3; /* Blue */
+    color: #fff;
+}
+.fizzbuzz {
+    background-color: #4caf50; /* Green */
+    color: #fff;
+}
+.number {
+    background-color: #e0e0e0; /* Light Gray */
+    color: #000;
+}
+
+/* Error messages */
 #error1,
 #error2,
 #error3 {
     color: red;
     text-emphasis: bold;
     text-align: center;
-    font-size: 14px;
-    margin: 2px 0;
+    font-size: 15px;
+    margin: 2px;
+}
+
+/* Responsive sizing */
+
+/* Tablet layout */
+@media (min-width: 576px) {
+    #nav_container {
+        grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+    }       
+    #div_container {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+/* Desktop layout */
+@media (min-width: 992px) {
+    #nav_container {
+        grid-template-columns: repeat(auto-fit, minmax(180px, auto));
+    }
+    #div_container {
+        grid-template-columns: repeat(10, 1fr);
+    }
 }
