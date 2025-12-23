@@ -37,8 +37,6 @@ label[for="buzz_value"] { grid-area: buzzLabel; }
 #button_bzz { grid-area: buzz; }
 #button_fbz { grid-area: fizzbuzz; }
 
-
-
 #nav_container {
     display: grid;
     gap: 8px;
