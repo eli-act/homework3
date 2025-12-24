@@ -122,8 +122,8 @@ label[for="buzz_value"] { grid-area: buzzLabel; }
 }
 
 /* Error messages */
-#error1, #error2, #error3 {
-    color: red;
+#error1, #error2, #error3, #error4 {
+    color: #d01608;
     font-weight: bold;
     text-align: center;
     font-size: 15px;

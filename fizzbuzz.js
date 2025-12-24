@@ -14,6 +14,7 @@ const fizzbuzzButton = document.getElementById("button_fbz");
 const error1 = document.getElementById("error1");
 const error2 = document.getElementById("error2");
 const error3 = document.getElementById("error3");
+const error4 = document.getElementById("error4");
 
 // Setting default values on page refresh
 const DEFAULTS = {min: 1, max: 100, fizz: 3, buzz: 5};
@@ -80,6 +81,7 @@ generateButton.addEventListener("click", () => {
   error1.innerText = "";
   error2.innerText = "";
   error3.innerText = "";
+  error4.innerText = "";
 
   let hasError = false;
 
@@ -99,6 +101,12 @@ generateButton.addEventListener("click", () => {
   if (Number(fizzInput.value) === Number(buzzInput.value)) {
     error3.innerText = "Fizz and buzz values must be different.";
     hasError = true;
+  }
+
+  // Error 4: any input value is outside the range 1-100
+  if ([minInput, maxInput, fizzInput, buzzInput].some(i => Number(i.value) < 1 || Number(i.value) > 100)) {
+  error4.innerText = "All input values must be between 1 and 100.";
+  hasError = true;
   }
 
   // If no errors, generate divs
